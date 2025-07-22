@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WellnessTour — Ischia & Montecatini</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    p.lead { font-size: 1.25rem; }
+
+    .btn-primary {
+      background: #00aaff; border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover { background: #0077aa; }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      padding: 60px 15px;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .director-block {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .director-block img {
+      max-width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .director-block img:hover {
+      transform: scale(1.05);
+    }
+
+    .director-block h3 {
+      margin-top: 20px;
+      font-size: 1.4rem;
+    }
+
+    .director-block p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .emoji-links a {
+      font-size: 2rem;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .emoji-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">WellnessTour</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tours">Туры</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profit">Прибыль</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="content">
+      <h1>Wellness туры в Ischia & Montecatini</h1>
+      <p class="lead">Оздоровление, термы, трансферы и полное сопровождение</p>
+      <a href="#contact" class="btn btn-primary">Записаться сейчас</a>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2 class="mb-4">О нас</h2>
+    <p>Мы – чешское агентство WellnessTour. Организуем wellness-туры в Италию: Giardini Poseidon на Ischia и Terme Tettuccio в Montecatini. Группы по 10–20 человек, полный пакет услуг: трансфер, проживание, сопровождение, поддержка 24/7.</p>
+  </section>
+
+  <section class="director-block">
+    <img src="director.png" alt="Директор Эдуард Королёв">
+    <h3>Эдуард Королёв</h3>
+    <p>Директор WellnessTour. Путешествует с вами и иногда любит бананы 🍌</p>
+  </section>
+
+  <section id="tours" class="bg-light">
+    <div class="container">
+      <h2 class="mb-4">Наши туры</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="giardini.png" class="card-img-top" alt="Giardini Poseidon">
+            <div class="card-body">
+              <h5 class="card-title">Ischia — Giardini Poseidon</h5>
+              <p>5 дней / 4 ночи: термы, трансфер из Неаполя, сопровождение.</p>
+              <p><strong>600 € / чел</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <img src="montecatini.png" class="card-img-top" alt="Montecatini Terme">
+            <div class="card-body">
+              <h5 class="card-title">Montecatini — Terme Tettuccio</h5>
+              <p>5 дней / 4 ночи: питьевые курсы, экскурсии, сопровождение.</p>
+              <p><strong>550 € / чел</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profit">
+    <div class="container">
+      <h2 class="mb-4">Прогноз прибыли</h2>
+      <ul>
+        <li>Выручка: 10 × 600 € = 6 000 €</li>
+        <li>Комиссия 15 % ≈ 900 €</li>
+        <li>Сопровождение: 50 € × 5 дней = 250 €</li>
+        <li><strong>Чистая прибыль ≈ 1 150 €</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Контакты</h2>
+      <form class="mb-4">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Ваше имя" required />
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email" required />
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Сообщение"></textarea>
+        </div>
+        <button class="btn btn-primary">Отправить</button>
+      </form>
+
+      <div class="emoji-links">
+        <a href="https://wa.me/420123456789" target="_blank">📱</a>
+        <a href="https://t.me/WellnessTourSupport" target="_blank">✈️</a>
+        <a href="https://www.tiktok.com/@wellnesstour" target="_blank">🎵</a>
+        <a href="https://m.me/WellnessTour" target="_blank">💬</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 WellnessTour | info@wellnesstour.cz | +420 123 456 789</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
